@@ -1,0 +1,68 @@
+.MyCard {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+}
+.ListCard {
+  margin-top: 1rem;
+}
+input.checkBox {
+  margin: 0.5rem !important;
+}
+.linkClass {
+  display: flex;
+  justify-content: space-between;
+}
+.linkClass a {
+  padding: 12px;
+}
+input[type='checkbox'] {
+  height: 1rem;
+  width: 1rem;
+  background-color: #ff7021;
+}
+Button.ResetRoom {
+  margin-right: 150px;
+  display: inline-block;
+  flex: 1;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  border: 1px solid #ff7000;
+  color: #ff7021;
+  height: 50px;
+}
+Button.CalVastuScore {
+  display: inline-block;
+  flex: 1;
+  background-color: #ff7021;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  height: 50px;
+}
+Button.CalVastuScore:hover {
+  background-color: #ff7021;
+  color: white;
+}
+Button.ResetRoom:hover {
+  background-color: #e5e5e5;
+  border: 1px solid #ff7000;
+  color: #ff7021;
+}
+ div.Button-Div{
+  display: flex;
+   margin-top :10 rem;
+}
+.myBreadcrumb{
+  margin-left:1rem;
+}
+.MyCol{
+  
+    border-bottom:1px Solid #dee2e6;
+    border-right :1px Solid #dee2e6;
+    padding:20px 20px;
+ 
+}
+.listCard{
+  padding: 1rem;
+}
+

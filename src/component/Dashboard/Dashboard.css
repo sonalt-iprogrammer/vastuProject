@@ -1,0 +1,13 @@
+.container {
+  margin-top: 5rem !important;
+}
+p {
+  font-size: 14px;
+}
+
+p.card-text {
+  margin-bottom: 0 !important;
+}
+.row{
+    cursor: pointer;
+}

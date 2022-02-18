@@ -1,0 +1,60 @@
+.card.scoreCard {
+  display: none;
+  margin: 5rem !important;
+}
+.calculateCard {
+  margin: 5rem 20rem 1rem 20rem;
+  padding: 1rem;
+}
+input[value='Neutral'] {
+  color: #ffcd02;
+  background-color: #fffae6;
+}
+input[value*='Avoidable'] {
+  color: #d11e4c;
+  background-color: #fae8ed;
+}
+input[value*='Favorable'] {
+  color: #15b525;
+  background-color: #f1fbf2;
+}
+
+.compliantScore h5 {
+  color: #503796;
+}
+.compliantScore {
+  margin: 25px 20px;
+}
+.compliantScore p {
+  margin: 0 !important;
+}
+.btn-Neutral {
+  margin: 4px;
+  background-color: #fffae6;
+  color: #ffcd02;
+  border: none;
+  height: 3rem;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+}
+.btn-Favorable {
+  margin: 4px;
+  background-color: #f1fbf2;
+  color: #15b525;
+  border: none;
+  height: 3rem;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+}
+.btn-Avoidable {
+  margin: 4px;
+  background-color: #fae8ed;
+  color: #d11e4c;
+  border: none;
+  height: 3rem;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+}

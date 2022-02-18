@@ -1,0 +1,9 @@
+.sidebar {
+    margin: 0;
+    padding: 1rem;
+    width: 33%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow:scroll;
+  }
