@@ -63,6 +63,7 @@ const VastuscoreCheck = (props) => {
   const [modalShow, setModalShow] = useState(false)
 
   const onCardClickHandler = (item) => {
+    window.scrollTo(0, 0);
     console.log(item)
     setIsLoding(true)
     let inputs = document.getElementsByClassName('checkBox')
