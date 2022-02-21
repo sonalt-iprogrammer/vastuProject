@@ -63,6 +63,7 @@ const VastuscoreCheck = (props) => {
   const [modalShow, setModalShow] = useState(false)
 
   const onCardClickHandler = (item) => {
+    console.log(item)
     setIsLoding(true)
     let inputs = document.getElementsByClassName('checkBox')
 
@@ -98,8 +99,9 @@ const VastuscoreCheck = (props) => {
           Direction: item,
           listData: Responsedata?.data?.payload?.data?.roomList,
         }
-        setCardData(roomListData)
         setIsLoding(false)
+        setCardData(roomListData)
+
         setCardClicked(true)
       })
   }
@@ -169,14 +171,20 @@ const VastuscoreCheck = (props) => {
     setListData(resetValues)
     setCardClicked(false)
   }
+  const style = {
+    // Adding media querry..
+    '@media (max-width: 761px)': {
+      display: 'none',
+    },
+  }
 
   return (
     <Fragment>
       {!VastuScoreChecked && (
         <Sidebar>
-          {isLoading && <Loader></Loader>}
           <div className="vastuSidebar">
             <BreadCrumb className="myBreadcrumb"></BreadCrumb>
+
             {!isCardClicked && (
               <p>
                 Select the rooms that are present in each direction of your hone
@@ -184,9 +192,10 @@ const VastuscoreCheck = (props) => {
               </p>
             )}
             <div className="ListCard">
+              {isLoading && <Loader></Loader>}
               {isCardClicked && (
                 <div>
-                  <Card className="listCard">
+                  <Card className="listCard" style={style}>
                     <div>
                       {' '}
                       <h2>{cardData.Direction}</h2>
@@ -205,11 +214,7 @@ const VastuscoreCheck = (props) => {
                     <Row>
                       {cardData.listData.map((item, index) => {
                         return (
-                          <Col className='MyCol'
-                            key={index}
-                            sm={6}
-                            
-                          >
+                          <Col className="MyCol" key={index} sm={6}>
                             {' '}
                             <input
                               className="checkBox"
@@ -257,7 +262,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[0].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -276,7 +281,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[1].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -295,7 +300,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[2].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -314,7 +319,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[3].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -333,7 +338,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[4].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -352,7 +357,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[5].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -371,7 +376,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[6].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -390,7 +395,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[7].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -409,7 +414,7 @@ const VastuscoreCheck = (props) => {
                   ) : (
                     <ul>
                       {listData[8].RoomList.map((item) => {
-                        return <li>{[item]}</li>
+                        return <li key={item}>{[item]}</li>
                       })}
                     </ul>
                   )}
@@ -417,14 +422,18 @@ const VastuscoreCheck = (props) => {
               </Col>
             </Row>
 
-            <div className='Button-Div'>
-              <Button className='ResetRoom' onClick={() => {
+            <div className="Button-Div">
+              <Button
+                className="ResetRoom"
+                onClick={() => {
                   resetValue()
                 }}
               >
                 RESET ROOMS
               </Button>
-              <Button className="CalVastuScore" onClick={() => {
+              <Button
+                className="CalVastuScore"
+                onClick={() => {
                   CalculateVastuScore(listData)
                 }}
               >

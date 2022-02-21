@@ -1,9 +1,13 @@
 .main {
-    margin-left: 35%;
-    padding: 1rem;
-   
-    background-color:white;
-    height: 100%;
-  
-  
+  margin-left: 35%;
+  padding: 1rem;
+
+  background-color: white;
+  height: 100%;
+}
+
+@media screen and (max-width: 761px) {
+  .main {
+    margin: 0 !important;
   }
+}

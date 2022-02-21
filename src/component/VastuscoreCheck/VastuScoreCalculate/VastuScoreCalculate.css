@@ -1,7 +1,7 @@
-.card.scoreCard {
+/* .card.scoreCard {
   display: none;
   margin: 5rem !important;
-}
+} */
 .calculateCard {
   margin: 5rem 20rem 1rem 20rem;
   padding: 1rem;
@@ -57,4 +57,66 @@ input[value*='Favorable'] {
   font-weight: 600;
   font-size: 20px;
   border: none;
+}
+p.calculateHeading {
+  color: #666666;
+  font-weight: 600px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 2px;
+}
+.btn-reset {
+  width: 380px;
+  height: 50px;
+  margin-left: 45rem;
+  background-color: #ff7021;
+  border-radius: 4px;
+  color: white;
+  border: none;
+}
+.listItems {
+  border-bottom: 1px Solid #dee2e6;
+  border-right: 1px Solid #dee2e6;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.legend {
+  width: 120px;
+  height: 28px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600px;
+}
+.card-vastuCompliant {
+  background: #34bdb4;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.029693);
+  border-radius: 10px;
+  margin: 1rem 20rem 2rem 20rem;
+  border: none;
+}
+.card-plan {
+  padding: 3rem;
+}
+
+@media screen and (max-width: 731px) {
+  .calculateCard {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .btn-reset {
+    margin: 0 1rem 1rem 1rem;
+    width: 341px;
+  }
+
+  .listItems {
+    border-right: none;
+  }
+  .card-vastuCompliant {
+    margin: 0 1rem 2rem 1rem;
+  }
+  .card-plan {
+    padding: 1rem;
+  }
 }

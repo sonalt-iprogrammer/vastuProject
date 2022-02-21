@@ -12,12 +12,12 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-6">
+    <div className="container myCont">
+      <div className="row MainRow">
+        <div className="col-sm-6 mb-3">
           <div className="card" onClick={onCardOneClickHandler}>
             <div className="card-body">
-              <div className="row">
+              <div className="row RowInside">
                 <div className="col-sm-4">
                   <img src="assets/images/stock-photo-chiang-mai-thailand-dec-a-man-holds-apple-iphone-with-ios-compass-application-on-the-354697493 1.png" />
                 </div>
@@ -36,7 +36,7 @@ const Dashboard = () => {
         <div className="col-sm-6">
           <div className="card" onClick={onCardTwoClickHandler}>
             <div className="card-body">
-              <div className="row">
+              <div className="row ">
                 <div className="col-sm-4">
                   <img src="assets/images/stock-photo-house-object-and-colorful-wooden-blocks-with-direction-initial-alphabet-1789893335 1.png" />
                 </div>

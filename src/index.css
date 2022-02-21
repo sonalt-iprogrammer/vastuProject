@@ -12,3 +12,11 @@ code {
     monospace;
 }
 
+@media screen and (max-width:761px) {
+ body{
+  width: 100%;
+ } 
+ 
+  
+}
+

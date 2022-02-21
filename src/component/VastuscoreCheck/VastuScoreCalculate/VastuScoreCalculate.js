@@ -74,44 +74,29 @@ const VastuScoreCalculate = (props) => {
 
   return (
     <div>
-      <Card className='calculateCard'>
+      <Card className="calculateCard">
         <div>
           <a onClick={onGoBackClick}>
             <img src="assets/images/back_arrow-orange.png" alt="back_icon" />
             <span style={{ color: ' #FF7021' }}>GO BACK</span>
           </a>
         </div>
-        <h5
-          style={{
-            color: ' #666666',
-            fontWeight: '600',
-            fontSize: '18px',
-            lineHeight: '24px',
-            letterSpacing: '2px',
-          }}
-        >
-          OVERALL VAASTU SCORE
-        </h5>
+        <p className="calculateHeading">OVERALL VAASTU SCORE</p>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <h1 style={{ color: ' #D11E4C' }}>
             {props.ScoreData.overallVastuScore}
           </h1>
-          <h5 style={{ color: '#503796' }}>
+          <h5
+            style={{ color: '#503796' }}
+            onClick={() => {
+              onLegendClick()
+            }}
+          >
             {props.ScoreData.vastuScoreStatus}
           </h5>
         </div>
         <hr />
-        <p
-          style={{
-            color: ' #666666',
-            fontWeight: '600',
-            fontSize: '18px',
-            lineHeight: '24px',
-            letterSpacing: '2px',
-          }}
-        >
-          ROOM-WISE BREAKUP OF VAASTU SCORE
-        </p>
+        <p className="calculateHeading">ROOM-WISE BREAKUP OF VAASTU SCORE</p>
         <p style={{ color: ' #666666' }}>
           Tap on any room name to know more about the details of the room.
         </p>
@@ -119,17 +104,7 @@ const VastuScoreCalculate = (props) => {
         <Row>
           {roomWiseVastuScore.map((item) => {
             return (
-              <Col
-                key={Math.random()}
-                sm={6}
-                style={{
-                  borderBottom: '1px Solid #dee2e6',
-                  borderRight: '1px Solid #dee2e6',
-                  padding: '20px 20px',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                }}
-              >
+              <Col className="listItems" key={Math.random()} sm={6}>
                 {' '}
                 <div
                   onClick={() => {
@@ -140,15 +115,8 @@ const VastuScoreCalculate = (props) => {
                 </div>
                 <div>
                   <input
+                    className="legend"
                     type="button"
-                    style={{
-                      width: ' 120px',
-                      height: ' 28px',
-                      borderRadius: '8px',
-                      textTransform: ' uppercase',
-                      border: 'none',
-                      fontWeight: '600px',
-                    }}
                     onClick={() => {
                       onLegendClick()
                     }}
@@ -160,30 +128,11 @@ const VastuScoreCalculate = (props) => {
           })}
         </Row>
       </Card>
-      <button
-        onClick={() => resetting()}
-        style={{
-          width: '380px',
-          height: '50px',
-          marginLeft: '45rem',
-          background: '#FF7021',
-          borderRadius: '4px',
-          color: 'white',
-          border: 'none',
-        }}
-      >
+      <button className="btn-reset" onClick={() => resetting()}>
         RESET VASTU SCORE
       </button>
-      <div
-        style={{
-          background: ' #34BDB4',
-          boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.029693)',
-          borderRadius: '10px',
-          margin: '1rem 20rem 2rem 20rem',
-          border: 'none',
-        }}
-      >
-        <div style={{ padding: '3rem' }}>
+      <div className="card-vastuCompliant">
+        <div className="card-plan">
           <h5>Vaastu Compliant Plans</h5>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div>
@@ -216,31 +165,19 @@ const VastuScoreCalculate = (props) => {
           <div style={{ margin: '4px' }}>
             <h5 style={{ margin: '4px' }}>FAVOURABLE DIRECTIONS</h5>
             {roomModalData.favourableDirections.map((item) => {
-              return (
-                <button className='btn-Favorable'>
-                  {item}
-                </button>
-              )
+              return <button className="btn-Favorable">{item}</button>
             })}
           </div>
           <div style={{ margin: '4px' }}>
             <h5 style={{ margin: '4px' }}>NEUTRAL DIRECTIONS</h5>
             {roomModalData.nuetralDirections.map((item) => {
-              return (
-                <button className='btn-Neutral' >
-                  {item}
-                </button>
-              )
+              return <button className="btn-Neutral">{item}</button>
             })}
           </div>
           <div style={{ margin: '4px' }}>
             <h5 style={{ margin: '4px' }}>AVOIDABLE DIRECTIONS</h5>
             {roomModalData.unfavourableDirections.map((item) => {
-              return (
-                <button className='btn-Avoidable'>
-                  {item}
-                </button>
-              )
+              return <button className="btn-Avoidable">{item}</button>
             })}
           </div>
           <strong style={{ margin: '4px' }}>ABOUT</strong>

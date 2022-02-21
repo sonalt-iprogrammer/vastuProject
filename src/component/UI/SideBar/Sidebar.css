@@ -1,9 +1,17 @@
 .sidebar {
-    margin: 0;
-    padding: 1rem;
-    width: 33%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow:scroll;
+  margin: 0;
+  padding: 1rem;
+  width: 33%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
+}

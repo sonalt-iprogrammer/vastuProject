@@ -4,11 +4,12 @@ import './header.css'
 import { CgProfile } from 'react-icons/cg'
 import { FiSearch } from 'react-icons/fi'
 import { FiBell } from 'react-icons/fi'
+import { propTypes } from 'react-bootstrap/esm/Image'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Fragment>
-      <Navbar expand="lg">
+      <Navbar className="ForDesktop" expand="lg">
         <Container fluid>
           <Navbar.Brand href="/">Utec</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -36,6 +37,12 @@ const Header = () => {
               <CgProfile className="MyIcon" size="25px"></CgProfile>
             </Form>
           </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      <Navbar className="ForMobile" expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="/">{props.children}</Navbar.Brand>
         </Container>
       </Navbar>
     </Fragment>

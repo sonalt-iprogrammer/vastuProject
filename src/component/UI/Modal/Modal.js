@@ -15,8 +15,6 @@ const MyModal = (props) => {
 
   let List = chunk([...showData], 2)
 
-  console.log(props.modalData)
-
   useEffect(() => {
     let requestJSON = { direction: props.modalData }
 
@@ -26,7 +24,6 @@ const MyModal = (props) => {
         requestJSON,
       )
       .then((Response) => {
-        console.log(Response)
         setShowdata(Response.data.payload.data.favourableDirections)
       })
   }, [])

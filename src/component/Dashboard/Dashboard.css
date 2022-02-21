@@ -1,4 +1,4 @@
-.container {
+.myCont {
   margin-top: 5rem !important;
 }
 p {
@@ -8,6 +8,12 @@ p {
 p.card-text {
   margin-bottom: 0 !important;
 }
-.row{
-    cursor: pointer;
+.row {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 731px) {
+  .myCont {
+    margin-top: 1rem !important;
+  }
 }

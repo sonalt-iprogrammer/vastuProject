@@ -52,7 +52,7 @@ const VastuScore = () => {
           <h1>{isLoading}</h1>
           {isLoading && <Loader></Loader>}
           {!isLoading && (
-            <div>
+            <div className="listContent">
               {val.map((items) => {
                 return (
                   <Row key={Math.random()}>
@@ -72,6 +72,27 @@ const VastuScore = () => {
           )}
         </div>
       </Sidebar>
+      {/* <Row className='insideVastuScore'>
+      <div  className='listContent'>
+              {val.map((items) => {
+                return (
+                  <Row key={Math.random()}>
+                    {items.map((item) => {
+                      return (
+                        <Col key={item}>
+                          <Card className="MyCard" key={item}>
+                            {item}
+                          </Card>
+                        </Col>
+                      )
+                    })}
+                  </Row>
+                )
+              })}
+            </div>
+        
+
+      </Row> */}
     </Fragment>
   )
 }

@@ -1,6 +1,6 @@
 const BreadCrumb = () => {
   return (
-    <div>
+    <div className="myBreadcrumb">
       Home/Solutions/<strong>VastuCheck</strong>
     </div>
   )

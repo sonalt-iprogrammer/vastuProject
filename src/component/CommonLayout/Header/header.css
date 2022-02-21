@@ -37,3 +37,19 @@ li {
   transform: scale(1.1);
   background: #ffffff;
 }
+nav.ForDesktop.navbar.navbar-expand-lg.navbar-light {
+  display: block;
+}
+nav.ForMobile.navbar.navbar-expand-lg.navbar-light {
+  display: none;
+}
+@media screen and (max-width: 761px) {
+  nav.ForDesktop.navbar.navbar-expand-lg.navbar-light {
+    display: none;
+  }
+
+  nav.ForMobile.navbar.navbar-expand-lg.navbar-light {
+    display: block;
+    width: 100%;
+  }
+}

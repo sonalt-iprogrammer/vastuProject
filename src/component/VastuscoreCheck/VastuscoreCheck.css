@@ -48,21 +48,30 @@ Button.ResetRoom:hover {
   border: 1px solid #ff7000;
   color: #ff7021;
 }
- div.Button-Div{
+div.Button-Div {
   display: flex;
-   margin-top :10 rem;
+  margin-top: 10 rem;
 }
-.myBreadcrumb{
-  margin-left:1rem;
+.myBreadcrumb {
+  margin-left: 1rem;
 }
-.MyCol{
-  
-    border-bottom:1px Solid #dee2e6;
-    border-right :1px Solid #dee2e6;
-    padding:20px 20px;
- 
+.MyCol {
+  border-bottom: 1px Solid #dee2e6;
+  border-right: 1px Solid #dee2e6;
+  padding: 20px 20px;
 }
-.listCard{
+.listCard {
   padding: 1rem;
 }
 
+@media screen and (max-width: 761px) {
+  .MyCard {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  Button.ResetRoom {
+    display: none;
+  }
+}
