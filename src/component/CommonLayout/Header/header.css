@@ -10,9 +10,7 @@ nav.navbar.navbar-expand-lg {
   border-bottom-left-radius: 20px 20px;
   padding: 1rem 10rem;
 }
-.container-fluid {
-  margin-left: 5rem !important;
-}
+
 
 .cardButton {
   margin-top: 5rem;
