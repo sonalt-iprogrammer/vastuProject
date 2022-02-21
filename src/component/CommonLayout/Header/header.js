@@ -6,7 +6,7 @@ import { FiSearch } from 'react-icons/fi'
 import { FiBell } from 'react-icons/fi'
 import { propTypes } from 'react-bootstrap/esm/Image'
 
-const Header = (props) => {
+const Header = () => {
   return (
     <Fragment>
       <Navbar className="ForDesktop" expand="lg">
@@ -42,7 +42,7 @@ const Header = (props) => {
 
       <Navbar className="ForMobile" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">{props.children}</Navbar.Brand>
+          <Navbar.Brand href="/"><strong>Utec</strong></Navbar.Brand>
         </Container>
       </Navbar>
     </Fragment>

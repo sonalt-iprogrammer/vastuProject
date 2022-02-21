@@ -11,7 +11,46 @@ p.card-text {
 .row {
   cursor: pointer;
 }
+.vaastu-title {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
 
+  color: #333333;
+}
+.heading {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #666666;
+}
+
+small {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+
+  color: #999999;
+}
+.card-text {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+
+  color: #666666;
+}
 @media screen and (max-width: 731px) {
   .myCont {
     margin-top: 1rem !important;

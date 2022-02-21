@@ -14,7 +14,9 @@ const Dashboard = () => {
   return (
     <div className="container myCont">
       <div className="row MainRow">
+      <h5 className='heading'>Pick The Ideal Tool For You</h5>
         <div className="col-sm-6 mb-3">
+         
           <div className="card" onClick={onCardOneClickHandler}>
             <div className="card-body">
               <div className="row RowInside">
@@ -45,7 +47,7 @@ const Dashboard = () => {
                     Vaastu Score Check
                   </h5>
                   <small className="mb-2">Ideal for planning stage</small>
-                  <p className="mb-0">
+                  <p className="card-text">
                     Get an instant Vaastu score by entering the locations of all
                     the rooms in your house.
                   </p>
