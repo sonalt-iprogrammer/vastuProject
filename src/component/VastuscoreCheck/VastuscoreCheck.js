@@ -168,7 +168,6 @@ const VastuscoreCheck = (props) => {
     for (let i = 0; i < resetValues.length; i++) {
       resetValues[i].RoomList = []
     }
-    console.log(resetValues)
     setListData(resetValues)
     setCardClicked(false)
   }
